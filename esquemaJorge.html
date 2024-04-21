@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        .textarea-container {
+            display: none;
+        }
+    </style>
+
+    <script>/*Ya puedes aprender que hace esto capullo*/
+        function mostrarTextarea(option) {
+            var textareaContainers = document.getElementsByClassName("textarea-container");
+
+            for (var i = 0; i < textareaContainers.length; i++) {
+                textareaContainers[i].style.display = "none";
+            }
+
+            var selectedTextarea = document.getElementById("textarea-" + option);
+            selectedTextarea.style.display = "block";
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <fieldset>
+        <legend><h1>Informacion basica</h1></legend>
+        <div style="display: flex; flex-direction: row;" >
+            <div> <form action="">
+
+            <label for="">Jugador</label>
+            <input type="text" id="jugador" required><br><br>
+
+            <label for="">Nombre</label>
+            <input type="text" id="nombre" required><br><br>
+
+            <label for="">Raza</label><!--esto tiene que ser un desplegable-->
+            <input type="text" id="raza" required><br><br>
+
+            <label for="">Sexo</label>
+            <input type="text" id="sexo" required><br><br>
+
+            <label for="">Escuela</label>
+            <input type="text" id="escuela" required><br><br>
+
+            <label for="">Nivel</label>
+            <input type="text" id="nivel" required><br><br>
+
+            <label for="">HP</label>
+            <input type="text" id="hp" required><br><br>
+
+            <label for="">MP</label>
+            <input type="text" id="mp" required><br><br>
+
+            <label for="">5E</label>
+            <input type="text" id="5e" required><br><br>
+
+
+            <button id="Devolver" >asdfasdfsadf</button>
+            <button id="lala" >llalalalla</button>
+
+            <script src="./Jugador.js">
+                //import {devolveer}  from "./devolver.js"
+                //var miArray = [1, 2, 3, 4, 5];
+
+                //creo que primero le tiene que dar al boton
+                document.getElementById("Devolver").addEventListener("click", function () {
+
+
+                //(player, name, race, sex, school, level, hp, mp, fiveEsence )
+                var player = document.getElementById("jugador").value;
+                var name = document.getElementById("nombre").value;
+                var race = document.getElementById("raza").value;
+                var sex = document.getElementById("sexo").value;
+                var school = document.getElementById("escuela").value;
+                var level = Number(document.getElementById("nivel").value);
+                var hp = Number(document.getElementById("hp").value);
+                var mp = Number(document.getElementById("mp").value);
+                var fiveEsence = Number(document.getElementById("5e").value);
+
+                var player1 = new Jugador(player, name, race, sex, school, level, hp, mp, fiveEsence);
+
+
+                localStorage.setItem('player1', JSON.stringify(player1));
+                localStorage.setItem('nombre', 'Juan');
+localStorage.setItem("asdf", "asdf");
+                    console.log(localStorage.getItem('edad'));
+
+                });
+
+               
+/*
+                    if (document.getElementById("input").value != 0) {
+    
+                        document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) - Number(document.getElementById("input").value);
+                        ultimo = document.getElementById("input").value;
+    
+                        document.getElementById("input").value = 0;
+    
+                    } else {
+                        if (ultimo != 0) {
+                            document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) - Number(ultimo);
+                        } else {
+                            document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) - 1;
+                        }
+                    }*/
+                </script>
+
+        </form></div>
+            <div style="margin-left: auto;">
+                <img src="./bateria.jpg" alt="" >
+            </div>
+        </div>
+       
+    </fieldset>
+
+    <fieldset>
+        <!--puedes hacer que si le das a un boton se le hace -1 a los puntos de estadistica y que este todo automatizado y 
+con seguridad de que nadie se salte-->
+        <!--Puedes poner desplegables a la definicion de cada estadistica-->
+
+        <legend><h1>Estadisticas - <label for="">0</label> -pts</h1></legend>
+        <form action="">
+
+            <label for="">Vigor</label>
+            <input type="text" required><br><br>
+
+            <label for="">Inteligencia</label>
+            <input type="text" required><br><br>
+
+            <label for="">Fuerza</label><!--esto tiene que ser un desplegable-->
+            <input type="text" required><br><br>
+
+            <label for="">Destreza</label>
+            <input type="text" required><br><br>
+
+            <label for="">Resistencia</label>
+            <input type="text" required><br><br>
+
+            <label for="">Resistencia por golpe</label>
+            <input type="text" required><br><br>
+
+        </form>
+    </fieldset>
+
+    <fieldset>
+
+
+        <legend><h1>HABILIDADES - <label for="">0</label> -pts</h1></legend>
+        <form action="">
+            <label for="puntos">0 puntos</label><br><br>
+
+
+            <label for="">Habilidad</label>
+            <input type="text" required><br><br>
+
+            <label for="">Punteria</label>
+            <input type="text" required><br><br>
+
+            <label for="">Amaestrar</label><!--esto tiene que ser un desplegable-->
+            <input type="text" required><br><br>
+
+            <label for="">Velocidad</label>
+            <input type="text" required><br><br>
+
+            <label for="">Fortaleza</label>
+            <input type="text" required><br><br>
+
+            <label for="">Rastrea</label>
+            <input type="text" required><br><br>
+
+            <label for="">Percepcion</label>
+
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <!--Añadir un boton para añadir objetos y con un input-->
+        <legend><h1>Inventario</h1></legend>
+        <form>
+            <label for="opciones">Objetos</label><br>
+            <select id="opciones" name="opciones" onchange="mostrarTextarea(this.value)" required>
+                <option value="">Selecciona una opción...</option>
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+                <option value="3">Opción 3</option>
+                <option value="4">Opción 4</option>
+                <option value="5">Opción 5</option>
+            </select><br><br>
+
+            <div id="textarea-1" class="textarea-container">
+                <label for="opcion1">Opción 1:</label><br>
+                <textarea id="opcion1" name="opcion1" rows="4" cols="50"></textarea><br><br>
+            </div>
+
+            <div id="textarea-2" class="textarea-container">
+                <label for="opcion2">Opción 2:</label><br>
+                <textarea id="opcion2" name="opcion2" rows="4" cols="50"></textarea><br><br>
+            </div>
+
+            <div id="textarea-3" class="textarea-container">
+                <label for="opcion3">Opción 3:</label><br>
+                <textarea id="opcion3" name="opcion3" rows="4" cols="50"></textarea><br><br>
+            </div>
+
+            <div id="textarea-4" class="textarea-container">
+                <label for="opcion4">Opción 4:</label><br>
+                <textarea id="opcion4" name="opcion4" rows="4" cols="50"></textarea><br><br>
+            </div>
+
+            <div id="textarea-5" class="textarea-container">
+                <label for="opcion5">Opción 5:</label><br>
+                <textarea id="opcion5" name="opcion5" rows="4" cols="50"></textarea><br><br>
+            </div>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+
+    </fieldset>
+
+    <fieldset>
+        <legend><h1>ORO</h1></legend>
+        <div id="valor"></div><br><br>
+        <input type="number" id="input" name="oro" min="0">
+        <button id="resta">Restar</button>
+        <button id="suma">Sumar</button>
+
+        <script>
+            var ultimo = 0;
+            document.getElementById("input").value = 0;
+            document.getElementById("valor").textContent = "3000";
+
+            document.getElementById("resta").addEventListener("click", function () {
+
+                if (document.getElementById("input").value != 0) {
+
+                    document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) - Number(document.getElementById("input").value);
+                    ultimo = document.getElementById("input").value;
+
+                    document.getElementById("input").value = 0;
+
+                } else {
+                    if (ultimo != 0) {
+                        document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) - Number(ultimo);
+                    } else {
+                        document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) - 1;
+                    }
+                }
+
+            });
+
+            document.getElementById("suma").addEventListener("click", function () {
+
+                if (document.getElementById("input").value != 0) {
+
+                    document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) + Number(document.getElementById("input").value);
+                    ultimo = document.getElementById("input").value;
+                    document.getElementById("input").value = 0;
+
+                } else {
+                    if (ultimo != 0) {
+                        document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) + Number(ultimo);
+                    } else {
+                        document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) + 1;
+                    }
+                }
+
+            });
+
+        </script>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h1>Inventario en comun</h1>
+        </legend>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h1>Poderes</h1>
+        </legend>
+        <!--Podriamos poner los lista de poderes en una base de datos y que mediante un codigo
+que tendra cada poder y se genere cada vez que alguien se ponga el poder y asi la gente
+no puede ponerse el poder sin tener el codigo pero asi se podrian tener acceso a los poderes
+-->
+    </fieldset>
+
+    <fieldset>
+        <legend>Hechizos</legend>
+
+
+    </fieldset>
+    <!--
+    <fieldset>
+        <legend><h1>HABILIDADES</h1></legend>
+        <h3>HABILIDAD</h3>
+        <table border="1">
+
+            <tr>
+                <th><strong>NIVLEL 1</strong></th>
+                <th><strong>NIVLEL 2</strong></th>
+                <th><strong>NIVLEL 3</strong></th>
+                <th><strong>NIVLEL 4</strong></th>
+                <th><strong>NIVLEL 5</strong></th>
+            </tr>
+            <tr>
+                <th>Objetos comunes</th>
+                <th>Objetos infrecuentes</th>
+                <th>Objetos raros</th>
+                <th>Objetos epicos</th>
+                <th>Objetos legendarios</th>
+            </tr>
+
+            </table>
+            <h3>FUERZA</h3>
+            <table border="1">
+
+                <tr>
+                    <th><strong>NIVLEL 1</strong></th>
+                    <th><strong>NIVLEL 2</strong></th>
+                    <th><strong>NIVLEL 3</strong></th>
+                    <th><strong>NIVLEL 4</strong></th>
+                    <th><strong>NIVLEL 5</strong></th>
+                </tr>
+                <tr>
+                    <th>2d6 + en todas las tiradas de peso y daño físico si estás a dos manos 3d6 en vez de 2d6.</th>
+                    <th>2d6 + en todas las tiradas de peso y daño físico si estás a dos manos 3d6 en vez de 2d6.</th>
+                    <th>2d6 + en todas las tiradas de peso y daño físico si estás a dos manos 3d6 en vez de 2d6.</th>
+                    <th>2d6 + en todas las tiradas de peso y daño físico. si estás a dos manos 3d6 en vez de 2d6.</th>
+                    <th>12d6 + en todas las tiradas de peso y daño físico, si estás a dos manos 18d6 en vez de 12d6. por cada 6 sacado tiras 1d10 de crítico en vez de d6.</th>
+                </tr>
+            </table>
+                <h3>HABILIDAD</h3>
+                <table border="1">
+
+                    <tr>
+                        <th><strong>NIVLEL 1</strong></th>
+                        <th><strong>NIVLEL 2</strong></th>
+                        <th><strong>NIVLEL 3</strong></th>
+                        <th><strong>NIVLEL 4</strong></th>
+                        <th><strong>NIVLEL 5</strong></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </table>
+                    <h3>HABILIDAD</h3>
+                    <table border="1">
+
+                        <tr>
+                            <th><strong>NIVLEL 1</strong></th>
+                            <th><strong>NIVLEL 2</strong></th>
+                            <th><strong>NIVLEL 3</strong></th>
+                            <th><strong>NIVLEL 4</strong></th>
+                            <th><strong>NIVLEL 5</strong></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </table>
+                        <h3>HABILIDAD</h3>
+                        <table border="1">
+
+                            <tr>
+                                <th><strong>NIVLEL 1</strong></th>
+                                <th><strong>NIVLEL 2</strong></th>
+                                <th><strong>NIVLEL 3</strong></th>
+                                <th><strong>NIVLEL 4</strong></th>
+                                <th><strong>NIVLEL 5</strong></th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+
+
+
+                        </table>
+
+
+    </fieldset>-->
+
+    <fieldset>
+        <legend>
+            <h1>HISTORIA</h1>
+        </legend>
+
+        <form action="">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </form>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h1>OBJETIVOS</h1>
+            </legend>
+
+        <input type="checkbox" name="" id="">
+        <label for="">MAtar trenta i dos peces</label><br><br>
+
+        <input type="checkbox" name="" id="">
+        <label for="">MAtar trenta i dos peces</label><br><br>
+
+        <button>Añadir objetivo</button>
+        <input type="text" name="" id="">
+
+    </fieldset>
+
+
+
+
+
+</body>
+
+</html>
