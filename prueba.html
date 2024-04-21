@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend><h1>Inventario</h1></legend>
+        <form>
+            <label for="opciones">Objetos</label><br>
+            <select id="opciones" name="opciones" onchange="mostrarTextarea(this.value)" required>
+                <option value="">Selecciona una opción...</option>
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+                <option value="3">Opción 3</option>
+                <option value="4">Opción 4</option>
+                <option value="5">Opción 5</option>
+                <option value="add">Añadir</option>
+            </select><br><br>
+    
+            <!-- Textareas para opciones existentes -->
+            <div id="textarea-1" class="textarea-container" style="display: none;">
+                <label for="opcion1">Opción 1:</label><br>
+                <textarea id="opcion1" name="opcion1" rows="4" cols="50"></textarea><br><br>
+            </div>
+            <!-- Repite lo mismo para las otras opciones -->
+    
+            <!-- Textarea para la opción "Añadir" (inicialmente oculto) -->
+            <div id="textarea-add" class="textarea-container" style="display: none;">
+                <label for="opcion-add">Nueva opción:</label><br>
+                <textarea id="opcion-add" name="opcion-add" rows="4" cols="50"></textarea><br><br>
+            </div>
+    
+            <input type="submit" value="Enviar">
+        </form>
+    </fieldset>
+    
+    <script>
+        function mostrarTextarea(option) {
+            var textareaContainers = document.getElementsByClassName("textarea-container");
+    
+            for (var i = 0; i < textareaContainers.length; i++) {
+                textareaContainers[i].style.display = "none";
+            }
+    
+            if (option === "add") { // Si se selecciona "Añadir"
+                var lastOptionIndex = document.querySelectorAll('[id^="textarea-"]').length;
+                var newOptionIndex = lastOptionIndex + 1;
+                var newOptionTextarea = document.createElement("div");
+                newOptionTextarea.id = "textarea-" + newOptionIndex;
+                newOptionTextarea.className = "textarea-container";
+                newOptionTextarea.innerHTML = '<label for="opcion' + newOptionIndex + '">Opción ' + newOptionIndex + ':</label><br>' +
+                                              '<textarea id="opcion' + newOptionIndex + '" name="opcion' + newOptionIndex + '" rows="4" cols="50"></textarea><br><br>';
+                document.querySelector('form').insertBefore(newOptionTextarea, document.querySelector('input[type="submit"]'));
+                newOptionTextarea.style.display = "block"; // Muestra el nuevo textarea
+            } else { // Si se selecciona una opción existente
+                var selectedTextarea = document.getElementById("textarea-" + option);
+                selectedTextarea.style.display = "block"; // Muestra el textarea correspondiente a la opción seleccionada
+            }
+        }
+    </script>
+</body>
+</html>
