@@ -9,9 +9,7 @@
         .textarea-container {
             display: none;
         }
-        label{
-            width: 305555px;
-        }
+
 
     </style>
 
@@ -131,25 +129,43 @@ con seguridad de que nadie se salte-->
         <!--Puedes poner desplegables a la definicion de cada estadistica-->
 
         <legend><h1>Estadisticas - <label for="">0</label> -pts</h1></legend>
-        <form action="">
+        <form action="" id="estadisticas">
 
             <label for="">Vigor</label>
-            <input type="text" required><br><br>
+            <label for="" id="valueVigor" type="Number" >0</label>
+            <label for="" type="text">/</label>
+            <label for="" id="MaxVigor" type="Number">5</label>
+            <button>Subir <label for="" type="Number" id="UPVigor">1</label></button><br><br>
 
-            <label for="">Inteligencia</label>
-            <input type="text" required><br><br>
+            <label for="inteligencia">Inteligencia</label>
+            <label for="inteligencia" id="valueInteligencia">0</label>
+            <label for="inteligencia">/</label>
+            <label for="inteligencia" id="MaxInteligencia">5</label>
+            <button>Subir <label for="" type="Number" id="UPInteligencia">1</label></button><br><br>
 
-            <label for="">Fuerza</label><!--esto tiene que ser un desplegable-->
-            <input type="text" required><br><br>
+            <label for="fuerza">Fuerza</label>
+            <label for="fuerza" id="valueFuerza">0</label>
+            <label for="fuerza">/</label>
+            <label for="fuerza" id="MaxFuerza">5</label>
+            <button>Subir <label for="" type="Number" id="UPFuerza">1</label></button><br><br>
 
-            <label for="">Destreza</label>
-            <input type="text" required><br><br>
+            <label for="destreza">Destreza</label>
+            <label for="destreza" id="valueDestreza">0</label>
+            <label for="destreza">/</label>
+            <label for="destreza" id="MaxDestreza">5</label>
+            <button>Subir <label for="" type="Number" id="UPDestreza">1</label></button><br><br>
 
-            <label for="">Resistencia</label>
-            <input type="text" required><br><br>
+            <label for="resistencia">Resistencia</label>
+            <label for="resistencia" id="valueResistencia">0</label>
+            <label for="resistencia">/</label>
+            <label for="resistencia" id="MaxResistencia">5</label>
+            <button>Subir <label for="" type="Number" id="UPResistencia">1</label></button><br><br>
 
-            <label for="">Resistencia por golpe</label>
-            <input type="text" required><br><br>
+            <label for="resistenciaGolpe">Resistencia por golpe</label>
+            <label for="resistenciaGolpe" id="valueResistenciaGolpe">0</label>
+            <label for="resistenciaGolpe">/</label>
+            <label for="resistenciaGolpe" id="MaxResistenciaGolpe">5</label>
+            <button>Subir <label for="" type="Number" id="UPResistenciaGolpe">1</label></button><br><br>
 
         </form>
     </fieldset>
