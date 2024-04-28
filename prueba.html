@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+        .main{
+    @apply bg-slate-900
+  }
+  
+.raza-cuerpo {
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 24rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .raza-cuerpo:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .raza-titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .raza-descripcion {
+    color: #4a5568;
+  }
+  
+    </style>
+
 </head>
 <body>
+    <!--
     <fieldset>
         <legend><h1>Inventario</h1></legend>
         <form>
@@ -20,14 +54,14 @@
                 <option value="add">Añadir</option>
             </select><br><br>
     
-            <!-- Textareas para opciones existentes -->
+            -- Textareas para opciones existentes --
             <div id="textarea-1" class="textarea-container" style="display: none;">
                 <label for="opcion1">Opción 1:</label><br>
                 <textarea id="opcion1" name="opcion1" rows="4" cols="50"></textarea><br><br>
             </div>
-            <!-- Repite lo mismo para las otras opciones -->
+            -- Repite lo mismo para las otras opciones -->
     
-            <!-- Textarea para la opción "Añadir" (inicialmente oculto) -->
+            <!-- Textarea para la opción "Añadir" (inicialmente oculto) --
             <div id="textarea-add" class="textarea-container" style="display: none;">
                 <label for="opcion-add">Nueva opción:</label><br>
                 <textarea id="opcion-add" name="opcion-add" rows="4" cols="50"></textarea><br><br>
@@ -61,5 +95,47 @@
             }
         }
     </script>
+    -->
+
+    <div class="main">
+        
+
+        </div> 
+
+<script>
+    function MenuRazas() {
+  const navigate = useNavigate();
+
+  const razas = [
+    { nombre: 'Elfos', imagen: '', descripcion: 'Descripción de los elfos...' },
+    { nombre: 'Enanos', imagen: '', descripcion: 'Descripción de los enanos...' },
+    { nombre: 'Humanos', imagen: '/razas/Humano.jpg', descripcion: 'Descripción de los humanos...' },
+    { nombre: 'Orcos', imagen: '', descripcion: 'Descripción de los orcos...' },
+    { nombre : 'Calvooo', imagen : '/razas/Prueba.jpg',descripcion : ' Calvooooooooooooooo'}
+  ];
+
+  const AlRazaClick = (nombre) => {
+    
+    // Navegar a la URL correspondiente a la raza
+    navigate(`/razas/${nombre.toLowerCase()}`);
+  };
+
+  return (
+    <div className="flex flex-wrap justify-center">
+      {razas.map((raza, idx) => (
+        <div
+          key={idx}
+          className="raza-cuerpo"
+          onClick={() => AlRazaClick(raza.nombre)}
+        >
+          <h2 className="raza-titulo">{raza.nombre}</h2>
+          <img src={raza.imagen} alt={`Imagen de ${raza.nombre}`} />
+          <p className="raza-descripcion">{raza.descripcion}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+</script>
 </body>
 </html>
