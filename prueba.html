@@ -9,7 +9,7 @@
         .main{
     @apply bg-slate-900
   }
-  
+
 .raza-cuerpo {
     padding: 1rem;
     margin: 1rem;
@@ -98,11 +98,45 @@
     -->
 
     <div class="main">
-        
+        <button id="traer">traer</button>
 
         </div> 
 
 <script>
+document.getElementById("traer").addEventListener("click", function (event) {
+    const navigate = useNavigate();
+
+const razas = [
+  { nombre: 'Elfos', imagen: '', descripcion: 'Descripción de los elfos...' },
+  { nombre: 'Enanos', imagen: '', descripcion: 'Descripción de los enanos...' },
+  { nombre: 'Humanos', imagen: '/razas/Humano.jpg', descripcion: 'Descripción de los humanos...' },
+  { nombre: 'Orcos', imagen: '', descripcion: 'Descripción de los orcos...' },
+  { nombre : 'Calvooo', imagen : '/razas/Prueba.jpg',descripcion : ' Calvooooooooooooooo'}
+];
+
+const AlRazaClick = (nombre) => {
+  
+  // Navegar a la URL correspondiente a la raza
+  navigate(`/razas/${nombre.toLowerCase()}`);
+};
+
+return (
+  <div className="flex flex-wrap justify-center">
+    {razas.map((raza, idx) => (
+      <div
+        key={idx}
+        className="raza-cuerpo"
+        onClick={() => AlRazaClick(raza.nombre)}
+      >
+        <h2 className="raza-titulo">{raza.nombre}</h2>
+        <img src={raza.imagen} alt={`Imagen de ${raza.nombre}`} />
+        <p className="raza-descripcion">{raza.descripcion}</p>
+      </div>
+    ))}
+  </div>)
+
+});
+
     function MenuRazas() {
   const navigate = useNavigate();
 
