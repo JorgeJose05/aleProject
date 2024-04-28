@@ -1,4 +1,80 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Título</title>
+  <link rel="stylesheet" href="estilos/Menurazas.css">
+
+  
+  <style>
+  /* Estilos del archivo Menurazas.css */
+  .raza-cuerpo {
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 24rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .raza-cuerpo:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .raza-titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .raza-descripcion {
+    color: #4a5568;
+  }
+
+  .main{
+    background-color: slategray;
+  }
+</style>
+
+</head>
+<body>
+  <div class="main">
+    <div class="flex flex-wrap justify-center">
+      <!-- Aquí irían los elementos generados por el mapeo de razas -->
+      <div class="raza-cuerpo">
+        <h2 class="raza-titulo">Elfos</h2>
+        <img src="" alt="Imagen de Elfos">
+        <p class="raza-descripcion">Descripción de los elfos...</p>
+      </div>
+      <div class="raza-cuerpo">
+        <h2 class="raza-titulo">Enanos</h2>
+        <img src="" alt="Imagen de Enanos">
+        <p class="raza-descripcion">Descripción de los enanos...</p>
+      </div>
+      <div class="raza-cuerpo">
+        <h2 class="raza-titulo">Humanos</h2>
+        <img src="/razas/Humano.jpg" alt="Imagen de Humanos">
+        <p class="raza-descripcion">Descripción de los humanos...</p>
+      </div>
+      <div class="raza-cuerpo">
+        <h2 class="raza-titulo">Orcos</h2>
+        <img src="" alt="Imagen de Orcos">
+        <p class="raza-descripcion">Descripción de los orcos...</p>
+      </div>
+      <div class="raza-cuerpo">
+        <h2 class="raza-titulo">Calvooo</h2>
+        <img src="/razas/Prueba.jpg" alt="Imagen de Calvooo">
+        <p class="raza-descripcion">Calvooooooooooooooo</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!--
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,7 +115,7 @@
 
 </head>
 <body>
-    <!--
+    --
     <fieldset>
         <legend><h1>Inventario</h1></legend>
         <form>
@@ -59,13 +135,13 @@
                 <label for="opcion1">Opción 1:</label><br>
                 <textarea id="opcion1" name="opcion1" rows="4" cols="50"></textarea><br><br>
             </div>
-            -- Repite lo mismo para las otras opciones -->
+            -- Repite lo mismo para las otras opciones -
     
 
 
 
             
-            <!-- Textarea para la opción "Añadir" (inicialmente oculto) --
+            <! Textarea para la opción "Añadir" (inicialmente oculto) --
             <div id="textarea-add" class="textarea-container" style="display: none;">
                 <label for="opcion-add">Nueva opción:</label><br>
                 <textarea id="opcion-add" name="opcion-add" rows="4" cols="50"></textarea><br><br>
@@ -99,7 +175,7 @@
             }
         }
     </script>
-    -->
+    --
 
     <div class="main">
         
@@ -175,4 +251,4 @@ return (
 };
 </script>
 </body>
-</html>
+</html>-->
