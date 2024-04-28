@@ -56,6 +56,7 @@
                         //import {devolveer}  from "./devolver.js"
 
                         //primero le tiene que dar al boton
+                        /*
                         document.getElementById("traer").addEventListener("click", function (event) {
 
                             event.preventDefault();
@@ -74,7 +75,24 @@
 
                         });
 
+                        */
+                        
+                        //Esto tiene que pasar al principio
+                        document.getElementById("traer").addEventListener("click", function (event) {
 
+                            event.preventDefault();
+
+                            document.getElementById("jugador").textContent = "asdfasdf";
+                            document.getElementById("nombre").textContent = "name";
+                            document.getElementById("raza").textContent = "raceede";
+                            document.getElementById("sexo").textContent = "sex";
+                            document.getElementById("escuela").textContent = "school";
+                            document.getElementById("nivel").textContent = "level";
+                            document.getElementById("hp").textContent = 5;
+                            document.getElementById("mp").textContent = 5;
+                            document.getElementById("cinco_e").textContent = 5;
+
+                        });
                     </script>
 
 
