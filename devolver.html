@@ -5,107 +5,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devolver</title>
+    
     <style>
-        .textarea-container {
-            display: none;
-        }
-    </style>
+    
+    .main_Conatiner {
+      margin: 1rem auto; /* Margen en la parte superior e inferior y centrado horizontalmente */
+      max-width: 90%; /* Ancho máximo del contenedor */
+    }
+
+    .container {
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 90%;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: box-shadow 0.3s ease-in-out;
+      background-color: slategray;
+    }
+
+    .container:hover {
+      box-shadow: 0 4px 8px rgba(12, 12, 12, 0.2);
+    }
+
+    label {
+      
+      font-weight: 600;
+      /* Texto en negrita */
+      color: #313844;
+      /* Color de texto similar al original */
+    }
+
+  
+
+
+    button {
+      padding: 0.5rem 1.5rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #2d3748;
+      /* Color de texto similar al original */
+    }
+  </style>
 </head>
 
 <body>
 
+    <div id="main_Conatiner">
+        <div class="container">
+
+        <h1>Información básica</h1>
+        <div style="display: flex; flex-direction: row;">
+          <div>
+            <label for="jugador">Jugador</label>
+            <label id="jugador">Jorge</label><br><br>
+    
+            <label for="nombre">Nombre</label>
+            <label id="nombre">Roko</label><br><br>
+    
+            <label for="raza">Raza</label>
+            <label id="raza">Draconido</label><br><br>
+    
+            <label for="sexo">Sexo</label>
+            <label id="sexo">Sexante</label><br><br>
+    
+            <label for="escuela">Escuela</label>
+            <label id="escuela">Estable</label><br><br>
+    
+            <label for="nivel">Nivel</label>
+            <label id="nivel">level</label><br><br>
+    
+            <label for="hp">HP</label>
+            <label id="hp" class="numb">ijoputa</label><br><br>
+    
+            <label for="mp">MP</label>
+            <label id="mp" class="numb">mAMAPAPA</label><br><br>
+    
+            <label for="cinco_e">5E</label>
+            <label id="cinco_e" class="numb">EStados</label><br><br>
+    
+            <button id="traer">TRAER</button>
+          </div>
+          <div style="margin-left: auto;">
+            <img src="./bateria.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+
+        <h1>Estadisticas - <label for="">6</label> -pts</h1>
+        <div style="display: flex; flex-direction: row;">
+          <div>
+            <label for="">Vigor</label>
+            <label for="" id="valueVigor" type="number" >0</label>
+            <label for="" type="text">/</label>
+            <label for="" id="MaxVigor" type="number">5</label>
+            <button>Subir <label for="" type="number" id="UPVigor">1</label></button><br><br>
+
+            <label for="inteligencia">Inteligencia</label>
+            <label for="inteligencia" id="valueInteligencia">0</label>
+            <label for="inteligencia">/</label>
+            <label for="inteligencia" id="MaxInteligencia">5</label>
+            <button>Subir <label for="" type="number" id="UPInteligencia">1</label></button><br><br>
+
+            <label for="fuerza">Fuerza</label>
+            <label for="fuerza" id="valueFuerza">0</label>
+            <label for="fuerza">/</label>
+            <label for="fuerza" id="MaxFuerza">5</label>
+            <button>Subir <label for="" type="number" id="UPFuerza">1</label></button><br><br>
+
+            <label for="destreza">Destreza</label>
+            <label for="destreza" id="valueDestreza">0</label>
+            <label for="destreza">/</label>
+            <label for="destreza" id="MaxDestreza">5</label>
+            <button>Subir <label for="" type="number" id="UPDestreza">1</label></button><br><br>
+
+            <label for="resistencia">Resistencia</label>
+            <label for="resistencia" id="valueResistencia">0</label>
+            <label for="resistencia">/</label>
+            <label for="resistencia" id="MaxResistencia">5</label>
+            <button>Subir <label for="" type="number" id="UPResistencia">1</label></button><br><br>
+
+            <label for="resistenciaGolpe">Resistencia por golpe</label>
+            <label for="resistenciaGolpe" id="valueResistenciaGolpe">0</label>
+            <label for="resistenciaGolpe">/</label>
+            <label for="resistenciaGolpe" id="MaxResistenciaGolpe">5</label>
+            <button>Subir <label for="" type="number" id="UPResistenciaGolpe">1</label></button><br><br>
+
+        </div>
+      </div>
+
+    
+    
+    </div>
+    
     
 
-    <fieldset>
-        <legend>
-            <h1>Informacion basica</h1>
-        </legend>
-        <div style="display: flex; flex-direction: row;">
-            <div>
 
-                    <label for="jugador">Jugador</label>
-                    <label id="jugador">sdfdf</label><br><br>
+      <script>
+        // Script para el botón (como se proporcionó)
+        document.getElementById("traer").addEventListener("click", function (event) {
+    
+          event.preventDefault();
+    
+          document.getElementById("jugador").textContent = "asdfasdf";
+          document.getElementById("nombre").textContent = "name";
+          document.getElementById("raza").textContent = "raceede";
+          document.getElementById("sexo").textContent = "sex";
+          document.getElementById("escuela").textContent = "school";
+          document.getElementById("nivel").textContent = "level";
+          document.getElementById("hp").textContent = 5;
+          document.getElementById("mp").textContent = 5;
+          document.getElementById("cinco_e").textContent = 5;
+    
+    
+    
+    
+        });
+      </script>
 
-                    <label for="nombre">Nombre</label>
-                    <label id="nombre"></label><br><br>
-
-                    <label for="raza">Raza</label>
-                    <label id="raza"></label><br><br>
-
-                    <label for="sexo">Sexo</label>
-                    <label id="sexo"></label><br><br>
-
-                    <label for="escuela">Escuela</label>
-                    <label id="escuela"></label><br><br>
-
-                    <label for="nivel">Nivel</label>
-                    <label id="nivel"></label><br><br>
-
-                    <label for="hp">HP</label>
-                    <label id="hp"></label><br><br>
-
-                    <label for="mp">MP</label>
-                    <label id="mp">adfsd</label><br><br>
-
-                    <label for="cinco_e">5E</label>
-                    <label id="cinco_e"></label><br><br>
-
-
-                    <button id="traer">traer</button>
-
-                    <script>
-                        //import {devolveer}  from "./devolver.js"
-
-                        //primero le tiene que dar al boton
-                        /*
-                        document.getElementById("traer").addEventListener("click", function (event) {
-
-                            event.preventDefault();
-
-                            var jugador1 = JSON.parse(localStorage.getItem('player1'));
-                            document.getElementById("jugador").textContent = (jugador1.jugador).value;
-                            document.getElementById("raza").textContent = jugador1.hp;
-                            document.getElementById("nombre").textContent = name;
-                            document.getElementById("raza").textContent = race;
-                            document.getElementById("sexo").textContent = sex;
-                            document.getElementById("escuela").textContent = school;
-                            document.getElementById("nivel").textContent = level;
-                            document.getElementById("hp").textContent = hp;
-                            document.getElementById("mp").textContent = mp;
-                            document.getElementById("5e").textContent = fiveEsence;
-
-                        });
-
-                        */
-                        
-                        //Esto tiene que pasar al principio
-                        document.getElementById("traer").addEventListener("click", function (event) {
-
-                            event.preventDefault();
-
-                            document.getElementById("jugador").textContent = "asdfasdf";
-                            document.getElementById("nombre").textContent = "name";
-                            document.getElementById("raza").textContent = "raceede";
-                            document.getElementById("sexo").textContent = "sex";
-                            document.getElementById("escuela").textContent = "school";
-                            document.getElementById("nivel").textContent = "level";
-                            document.getElementById("hp").textContent = 5;
-                            document.getElementById("mp").textContent = 5;
-                            document.getElementById("cinco_e").textContent = 5;
-
-                        });
-                    </script>
-
-
-
-            </div>
-            <div style="margin-left: auto;">
-                <img src="./bateria.jpg" alt="">
-            </div>
-        </div>
-
-
-    </fieldset>
+    
 
     <fieldset>
         <!--puedes hacer que si le das a un boton se le hace -1 a los puntos de estadistica y que este todo automatizado y 
