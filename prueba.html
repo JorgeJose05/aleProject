@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +10,30 @@
     /* Estilos para tu formulario */
     .container {
       padding: 1rem;
-      margin: 1rem auto; /* Centra el formulario horizontalmente */
-      max-width: 90%; /* Anchura máxima del formulario */
+      margin: 1rem auto;
+      /* Centra el formulario horizontalmente */
+      max-width: 90%;
+      /* Anchura máxima del formulario */
       border: 1px solid #e2e8f0;
       border-radius: 0.5rem;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       cursor: pointer;
       transition: box-shadow 0.3s ease-in-out;
-      background-color: slategray; /* Fondo similar al original */
+      background-color: slategray;
+      /* Fondo similar al original */
     }
-  
+
     .container:hover {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-  
+
     label {
-      font-weight: 600; /* Texto en negrita */
-      color: #4a5568; /* Color de texto similar al original */
+      font-weight: 600;
+      /* Texto en negrita */
+      color: #4a5568;
+      /* Color de texto similar al original */
     }
-  
+
     button {
       padding: 0.5rem 1rem;
       background-color: #007bff;
@@ -37,29 +43,55 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
-  
+
     button:hover {
       background-color: #0056b3;
     }
-  
+
     h1 {
       font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: #2d3748; /* Color de texto similar al original */
+      color: #2d3748;
+      /* Color de texto similar al original */
     }
   </style>
-  
-  
+
+
 </head>
+
 <body>
   <div class="container">
     <h1>Información básica</h1>
     <div style="display: flex; flex-direction: row;">
       <div>
         <label for="jugador">Jugador</label>
-        <label id="jugador">sdfdf</label><br><br>
-         Resto de etiquetas --
+        <label id="jugador">Jorge</label><br><br>
+
+        <label for="nombre">Nombre</label>
+        <label id="nombre">Roko</label><br><br>
+
+        <label for="raza">Raza</label>
+        <label id="raza">Draconido</label><br><br>
+
+        <label for="sexo">Sexo</label>
+        <label id="sexo">Sexante</label><br><br>
+
+        <label for="escuela">Escuela</label>
+        <label id="escuela">Estable</label><br><br>
+
+        <label for="nivel">Nivel</label>
+        <label id="nivel">level</label><br><br>
+
+        <label for="hp">HP</label>
+        <label id="hp">ijoputa</label><br><br>
+
+        <label for="mp">MP</label>
+        <label id="mp">mAMAPAPA</label><br><br>
+
+        <label for="cinco_e">5E</label>
+        <label id="cinco_e">EStados</label><br><br>
+
         <button id="traer">traer</button>
       </div>
       <div style="margin-left: auto;">
@@ -71,12 +103,27 @@
   <script>
     // Script para el botón (como se proporcionó)
     document.getElementById("traer").addEventListener("click", function (event) {
+
       event.preventDefault();
+
       document.getElementById("jugador").textContent = "asdfasdf";
-      // Resto del script...
+      document.getElementById("nombre").textContent = "name";
+      document.getElementById("raza").textContent = "raceede";
+      document.getElementById("sexo").textContent = "sex";
+      document.getElementById("escuela").textContent = "school";
+      document.getElementById("nivel").textContent = "level";
+      document.getElementById("hp").textContent = 5;
+      document.getElementById("mp").textContent = 5;
+      document.getElementById("cinco_e").textContent = 5;
+
+
+
+
     });
   </script>
+
 </body>
+
 </html>
 <!----
 <html lang="es">
