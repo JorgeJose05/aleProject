@@ -1,9 +1,89 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tu Título</title>
+  <title>Informacion basica</title>
+  <style>
+    /* Estilos para tu formulario */
+    .container {
+      padding: 1rem;
+      margin: 1rem auto; /* Centra el formulario horizontalmente */
+      max-width: 90%; /* Anchura máxima del formulario */
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: box-shadow 0.3s ease-in-out;
+      background-color: slategray; /* Fondo similar al original */
+    }
+  
+    .container:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    label {
+      font-weight: 600; /* Texto en negrita */
+      color: #4a5568; /* Color de texto similar al original */
+    }
+  
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  
+    button:hover {
+      background-color: #0056b3;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #2d3748; /* Color de texto similar al original */
+    }
+  </style>
+  
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Información básica</h1>
+    <div style="display: flex; flex-direction: row;">
+      <div>
+        <label for="jugador">Jugador</label>
+        <label id="jugador">sdfdf</label><br><br>
+         Resto de etiquetas --
+        <button id="traer">traer</button>
+      </div>
+      <div style="margin-left: auto;">
+        <img src="./bateria.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Script para el botón (como se proporcionó)
+    document.getElementById("traer").addEventListener("click", function (event) {
+      event.preventDefault();
+      document.getElementById("jugador").textContent = "asdfasdf";
+      // Resto del script...
+    });
+  </script>
+</body>
+</html>
+<!----
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba</title>
   <link rel="stylesheet" href="estilos/Menurazas.css">
 
   
@@ -43,7 +123,7 @@
 <body>
   <div class="main">
     <div class="flex flex-wrap justify-center">
-      <!-- Aquí irían los elementos generados por el mapeo de razas -->
+     
       <div class="raza-cuerpo">
         <h2 class="raza-titulo">Elfos</h2>
         <img src="" alt="Imagen de Elfos">
@@ -141,7 +221,7 @@
 
 
             
-            <! Textarea para la opción "Añadir" (inicialmente oculto) --
+         
             <div id="textarea-add" class="textarea-container" style="display: none;">
                 <label for="opcion-add">Nueva opción:</label><br>
                 <textarea id="opcion-add" name="opcion-add" rows="4" cols="50"></textarea><br><br>
@@ -214,7 +294,7 @@ return (
     ))}
   </div>)
 
-});
+
 
     function MenuRazas() {
   const navigate = useNavigate();
