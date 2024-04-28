@@ -5,63 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devolver</title>
-    
+
     <style>
-    
-    .main_Conatiner {
-      margin: 1rem auto; /* Margen en la parte superior e inferior y centrado horizontalmente */
-      max-width: 90%; /* Ancho máximo del contenedor */
-    }
+        .main_Conatiner {
+            margin: 1rem auto;
+            /* Margen en la parte superior e inferior y centrado horizontalmente */
+            max-width: 90%;
+            /* Ancho máximo del contenedor */
+        }
 
-    .container {
-      padding: 1rem;
-      margin: 1rem auto;
-      max-width: 90%;
-      border: 1px solid #e2e8f0;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      transition: box-shadow 0.3s ease-in-out;
-      background-color: slategray;
-    }
+        .container {
+            padding: 1rem;
+            margin: 1rem auto;
+            max-width: 90%;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: box-shadow 0.3s ease-in-out;
+            background-color: slategray;
+        }
 
-    .container:hover {
-      box-shadow: 0 4px 8px rgba(12, 12, 12, 0.2);
-    }
+        .container:hover {
+            box-shadow: 0 4px 8px rgba(12, 12, 12, 0.2);
+        }
 
-    label {
-      
-      font-weight: 600;
-      /* Texto en negrita */
-      color: #313844;
-      /* Color de texto similar al original */
-    }
+        label {
 
-  
+            font-weight: 600;
+            /* Texto en negrita */
+            color: #313844;
+            /* Color de texto similar al original */
+        }
 
 
-    button {
-      padding: 0.5rem 1.5rem;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 0.25rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
 
-    button:hover {
-      background-color: #0056b3;
-    }
 
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #2d3748;
-      /* Color de texto similar al original */
-    }
-  </style>
+        button {
+            padding: 0.5rem 1.5rem;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+            /* Color de texto similar al original */
+        }
+    </style>
 </head>
 
 <body>
@@ -69,210 +70,284 @@
     <div id="main_Conatiner">
         <div class="container">
 
-        <h1>Información básica</h1>
-        <div style="display: flex; flex-direction: row;">
-          <div>
-            <label for="jugador">Jugador</label>
-            <label id="jugador">Jorge</label><br><br>
-    
-            <label for="nombre">Nombre</label>
-            <label id="nombre">Roko</label><br><br>
-    
-            <label for="raza">Raza</label>
-            <label id="raza">Draconido</label><br><br>
-    
-            <label for="sexo">Sexo</label>
-            <label id="sexo">Sexante</label><br><br>
-    
-            <label for="escuela">Escuela</label>
-            <label id="escuela">Estable</label><br><br>
-    
-            <label for="nivel">Nivel</label>
-            <label id="nivel">level</label><br><br>
-    
-            <label for="hp">HP</label>
-            <label id="hp" class="numb">ijoputa</label><br><br>
-    
-            <label for="mp">MP</label>
-            <label id="mp" class="numb">mAMAPAPA</label><br><br>
-    
-            <label for="cinco_e">5E</label>
-            <label id="cinco_e" class="numb">EStados</label><br><br>
-    
-            <button id="traer">TRAER</button>
-          </div>
-          <div style="margin-left: auto;">
-            <img src="./bateria.jpg" alt="">
-          </div>
+            <h1>Información básica</h1>
+            <div style="display: flex; flex-direction: row;">
+                <div>
+                    <label for="jugador">Jugador</label>
+                    <label id="jugador">Jorge</label><br><br>
+
+                    <label for="nombre">Nombre</label>
+                    <label id="nombre">Roko</label><br><br>
+
+                    <label for="raza">Raza</label>
+                    <label id="raza">Draconido</label><br><br>
+
+                    <label for="sexo">Sexo</label>
+                    <label id="sexo">Sexante</label><br><br>
+
+                    <label for="escuela">Escuela</label>
+                    <label id="escuela">Estable</label><br><br>
+
+                    <label for="nivel">Nivel</label>
+                    <label id="nivel">level</label><br><br>
+
+                    <label for="hp">HP</label>
+                    <label id="hp" class="numb">ijoputa</label><br><br>
+
+                    <label for="mp">MP</label>
+                    <label id="mp" class="numb">mAMAPAPA</label><br><br>
+
+                    <label for="cinco_e">5E</label>
+                    <label id="cinco_e" class="numb">EStados</label><br><br>
+
+                    <button id="traer">TRAER</button>
+                </div>
+                <div style="margin-left: auto;">
+                    <img src="./bateria.jpg" alt="">
+                </div>
+            </div>
+            <script>
+                // Script para el botón (como se proporcionó)
+                document.getElementById("traer").addEventListener("click", function (event) {
+
+                    event.preventDefault();
+
+                    document.getElementById("jugador").textContent = "asdfasdf";
+                    document.getElementById("nombre").textContent = "name";
+                    document.getElementById("raza").textContent = "raceede";
+                    document.getElementById("sexo").textContent = "sex";
+                    document.getElementById("escuela").textContent = "school";
+                    document.getElementById("nivel").textContent = "level";
+                    document.getElementById("hp").textContent = 5;
+                    document.getElementById("mp").textContent = 5;
+                    document.getElementById("cinco_e").textContent = 5;
+
+
+
+
+                });
+            </script>
         </div>
-      </div>
-      <div class="container">
+        <div class="container">
 
-        <h1>Estadisticas - <label for="">6</label> -pts</h1>
-        <div style="display: flex; flex-direction: row;">
-          <div>
-            <label for="">Vigor</label>
-            <label for="" id="valueVigor" type="number" >0</label>
-            <label for="" type="text">/</label>
-            <label for="" id="MaxVigor" type="number">5</label>
-            <button>Subir <label for="" type="number" id="UPVigor">1</label></button><br><br>
+            <h1>Estadisticas - <label for="">6</label> -pts</h1>
+            <div style="display: flex; flex-direction: row;">
+                <div>
+                    <label for="">Vigor</label>
+                    <label for="" id="valueVigor" type="number">0</label>
+                    <label for="" type="text">/</label>
+                    <label for="" id="MaxVigor" type="number">5</label>
+                    <button>Subir <label for="" type="number" id="UPVigor">1</label></button><br><br>
 
-            <label for="inteligencia">Inteligencia</label>
-            <label for="inteligencia" id="valueInteligencia">0</label>
-            <label for="inteligencia">/</label>
-            <label for="inteligencia" id="MaxInteligencia">5</label>
-            <button>Subir <label for="" type="number" id="UPInteligencia">1</label></button><br><br>
+                    <label for="inteligencia">Inteligencia</label>
+                    <label for="inteligencia" id="valueInteligencia">0</label>
+                    <label for="inteligencia">/</label>
+                    <label for="inteligencia" id="MaxInteligencia">5</label>
+                    <button>Subir <label for="" type="number" id="UPInteligencia">1</label></button><br><br>
 
-            <label for="fuerza">Fuerza</label>
-            <label for="fuerza" id="valueFuerza">0</label>
-            <label for="fuerza">/</label>
-            <label for="fuerza" id="MaxFuerza">5</label>
-            <button>Subir <label for="" type="number" id="UPFuerza">1</label></button><br><br>
+                    <label for="fuerza">Fuerza</label>
+                    <label for="fuerza" id="valueFuerza">0</label>
+                    <label for="fuerza">/</label>
+                    <label for="fuerza" id="MaxFuerza">5</label>
+                    <button>Subir <label for="" type="number" id="UPFuerza">1</label></button><br><br>
 
-            <label for="destreza">Destreza</label>
-            <label for="destreza" id="valueDestreza">0</label>
-            <label for="destreza">/</label>
-            <label for="destreza" id="MaxDestreza">5</label>
-            <button>Subir <label for="" type="number" id="UPDestreza">1</label></button><br><br>
+                    <label for="destreza">Destreza</label>
+                    <label for="destreza" id="valueDestreza">0</label>
+                    <label for="destreza">/</label>
+                    <label for="destreza" id="MaxDestreza">5</label>
+                    <button>Subir <label for="" type="number" id="UPDestreza">1</label></button><br><br>
 
-            <label for="resistencia">Resistencia</label>
-            <label for="resistencia" id="valueResistencia">0</label>
-            <label for="resistencia">/</label>
-            <label for="resistencia" id="MaxResistencia">5</label>
-            <button>Subir <label for="" type="number" id="UPResistencia">1</label></button><br><br>
+                    <label for="resistencia">Resistencia</label>
+                    <label for="resistencia" id="valueResistencia">0</label>
+                    <label for="resistencia">/</label>
+                    <label for="resistencia" id="MaxResistencia">5</label>
+                    <button>Subir <label for="" type="number" id="UPResistencia">1</label></button><br><br>
 
-            <label for="resistenciaGolpe">Resistencia por golpe</label>
-            <label for="resistenciaGolpe" id="valueResistenciaGolpe">0</label>
-            <label for="resistenciaGolpe">/</label>
-            <label for="resistenciaGolpe" id="MaxResistenciaGolpe">5</label>
-            <button>Subir <label for="" type="number" id="UPResistenciaGolpe">1</label></button><br><br>
+                    <label for="resistenciaGolpe">Resistencia por golpe</label>
+                    <label for="resistenciaGolpe" id="valueResistenciaGolpe">0</label>
+                    <label for="resistenciaGolpe">/</label>
+                    <label for="resistenciaGolpe" id="MaxResistenciaGolpe">5</label>
+                    <button>Subir <label for="" type="number" id="UPResistenciaGolpe">1</label></button><br><br>
+
+                </div>
+            </div>
+
+
 
         </div>
-      </div>
-
-    
-    
-    </div>
-    
-    
+        <div class="container">
+            <h1>HABILIDADES - <label for="" type="number">6</label> -pts</h1>
 
 
-      <script>
-        // Script para el botón (como se proporcionó)
-        document.getElementById("traer").addEventListener("click", function (event) {
-    
-          event.preventDefault();
-    
-          document.getElementById("jugador").textContent = "asdfasdf";
-          document.getElementById("nombre").textContent = "name";
-          document.getElementById("raza").textContent = "raceede";
-          document.getElementById("sexo").textContent = "sex";
-          document.getElementById("escuela").textContent = "school";
-          document.getElementById("nivel").textContent = "level";
-          document.getElementById("hp").textContent = 5;
-          document.getElementById("mp").textContent = 5;
-          document.getElementById("cinco_e").textContent = 5;
-    
-    
-    
-    
-        });
-      </script>
+            <label for="habilidad1">Habilidad </label>
+            <label for="habilidad1" id="valueHabilidad1">0</label>
+            <label for="habilidad1">/</label>
+            <label for="habilidad1" id="MaxHabilidad1">5</label>
+            <button>Subir <label for="" type="number" id="UPHabilidad">1</label></button><br><br>
 
-    
+            <label for="punteria">Puntería</label>
+            <label for="punteria" id="valuePunteria">0</label>
+            <label for="punteria">/</label>
+            <label for="punteria" id="MaxPunteria">5</label>
+            <button>Subir <label for="" type="number" id="UPPunteria">1</label></button><br><br>
 
-    <fieldset>
-        <!--puedes hacer que si le das a un boton se le hace -1 a los puntos de estadistica y que este todo automatizado y 
-        con seguridad de que nadie se salte-->
-        <!--Puedes poner desplegables a la definicion de cada estadistica-->
+            <label for="amaestrar">Amaestrar</label>
+            <label for="amaestrar" id="valueAmaestrar">0</label>
+            <label for="amaestrar">/</label>
+            <label for="amaestrar" id="MaxAmaestrar">5</label>
+            <button>Subir <label for="" type="number" id="UPAmaestrar">1</label></button><br><br>
 
-        <legend>
-            <h1>Estadisticas - <span id="estadisticas_pts">0</span> -pts</h1>
-        </legend>
-        <form action="">
+            <label for="velocidad">Velocidad</label>
+            <label for="velocidad" id="valueVelocidad">0</label>
+            <label for="velocidad">/</label>
+            <label for="velocidad" id="MaxVelocidad">5</label>
+            <button>Subir <label for="" type="number" id="UPVelocidad">1</label></button><br><br>
 
-            <label for="vigor">Vigor</label>
-            <input type="number" id="vigor" name="vigor" min="0" required><br><br>
+            <label for="fortaleza">Fortaleza</label>
+            <label for="fortaleza" id="valueFortaleza">0</label>
+            <label for="fortaleza">/</label>
+            <label for="fortaleza" id="MaxFortaleza">5</label>
+            <button>Subir <label for="" type="number" id="UPFortaleza">1</label></button><br><br>
 
-            <label for="inteligencia">Inteligencia</label>
-            <input type="number" id="inteligencia" name="inteligencia" min="0" required><br><br>
+            <label for="rastrear">Rastrear</label>
+            <label for="rastrear" id="valueRastrear">0</label>
+            <label for="rastrear">/</label>
+            <label for="rastrear" id="MaxRastrear">5</label>
+            <button>Subir <label for="" type="number" id="UPRastrear">1</label></button><br><br>
 
-            <label for="fuerza">Fuerza</label>
-            <select id="fuerza" name="fuerza" required>
-                <option value="">Selecciona un nivel de fuerza...</option>
-                <option value="debil">Débil</option>
-                <option value="medio">Medio</option>
-                <option value="fuerte">Fuerte</option>
+            <label for="percepcion">Percepción</label>
+            <label for="percepcion" id="valuePercepcion">0</label>
+            <label for="percepcion">/</label>
+            <label for="percepcion" id="MaxPercepcion">5</label>
+            <button>Subir <label for="" type="number" id="UPPercepcion">1</label></button><br><br>
+
+        </div>
+        <div class="container">
+            <h1>Inventario</h1>
+
+            <label for="opciones">Objetos</label><br>
+            <select id="opciones" name="opciones" onchange="mostrarTextarea(this.value)" required>
+                <option value="">Selecciona una opción...</option>
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+                <option value="3">Opción 3</option>
+                <option value="4">Opción 4</option>
+                <option value="5">Opción 5</option>
+                <option value="add">Añadir</option>
             </select><br><br>
 
-            <label for="destreza">Destreza</label>
-            <input type="number" id="destreza" name="destreza" min="0" required><br><br>
 
-            <label for="resistencia">Resistencia</label>
-            <input type="number" id="resistencia" name="resistencia" min="0" required><br><br>
+            <div id="textarea-1" class="textarea-container" style="display: none;">
+                <label for="opcion1">Opción 1:</label><br>
+                <textarea id="opcion1" name="opcion1" rows="4" cols="50"></textarea><br><br>
+            </div>
 
-            <label for="resistencia_golpe">Resistencia por golpe</label>
-            <input type="number" id="resistencia_golpe" name="resistencia_golpe" min="0" required><br><br>
 
-        </form>
-    </fieldset>
+            <div id="textarea-add" class="textarea-container" style="display: none;">
+                <label for="opcion-add">Nueva opción:</label><br>
+                <textarea id="opcion-add" name="opcion-add" rows="4" cols="50"></textarea><br><br>
+            </div>
 
-    <fieldset>
-        <legend>
-            <h1>HABILIDADES - <span id="habilidades_pts">0</span> -pts</h1>
-        </legend>
-        <label for="">Habilidad 1</label><br><br>
-        <label for="">Habilidad 2</label><br><br>
-        <label for="">Habilidad 3</label><br><br>
-        <label for="">Habilidad 4</label><br><br>
-    </fieldset>
+            <input type="submit" value="Enviar">
 
-    <fieldset>
-        <legend>
-            <h1>Inventario</h1>
-        </legend>
-        <label for="opciones">Objetos</label><br>
-        <select id="opciones" name="opciones" onchange="mostrarTextarea(this.value)" required>
-            <option value="">Selecciona una opción...</option>
-            <option value="1">Opción 1</option>
-            <option value="2">Opción 2</option>
-            <option value="3">Opción 3</option>
-            <option value="4">Opción 4</option>
-            <option value="5">Opción 5</option>
-        </select><br><br>
-
-        <div id="textarea-1" class="textarea-container">
-            <label for="opcion1">Opción 1:</label><br>
-            <textarea id="opcion1" name="opcion1" rows="4" cols="50"></textarea><br><br>
         </div>
 
-        <div id="textarea-2" class="textarea-container">
-            <label for="opcion2">Opción 2:</label><br>
-            <textarea id="opcion2" name="opcion2" rows="4" cols="50"></textarea><br><br>
-        </div>
-
-        <div id="textarea-3" class="textarea-container">
-            <label for="opcion3">Opción 3:</label><br>
-            <textarea id="opcion3" name="opcion3" rows="4" cols="50"></textarea><br><br>
-        </div>
-
-        <div id="textarea-4" class="textarea-container">
-            <label for="opcion4">Opción 4:</label><br>
-            <textarea id="opcion4" name="opcion4" rows="4" cols="50"></textarea><br><br>
-        </div>
-
-        <div id="textarea-5" class="textarea-container">
-            <label for="opcion5">Opción 5:</label><br>
-            <textarea id="opcion5" name="opcion5" rows="4" cols="50"></textarea><br><br>
-        </div>
-
-        <input type="submit" value="Enviar">
-    </fieldset>
-
-    <fieldset>
-        <legend>
+        <div class="container">
             <h1>ORO</h1>
-        </legend>
+
+            <div id="valor"></div><br><br>
+            <input type="number" id="input" name="oro" min="0">
+            <button id="resta">Restar</button>
+            <button id="suma">Sumar</button>
+
+            <script>
+                var ultimo = 0;
+                document.getElementById("input").value = 0;
+                document.getElementById("valor").textContent = "3000";
+
+                document.getElementById("resta").addEventListener("click", function () {
+
+                    if (document.getElementById("input").value != 0) {
+
+                        document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) - Number(document.getElementById("input").value);
+                        ultimo = document.getElementById("input").value;
+
+                        document.getElementById("input").value = 0;
+
+                    } else {
+                        if (ultimo != 0) {
+                            document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) - Number(ultimo);
+                        } else {
+                            document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) - 1;
+                        }
+                    }
+
+                });
+
+                document.getElementById("suma").addEventListener("click", function () {
+
+                    if (document.getElementById("input").value != 0) {
+
+                        document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) + Number(document.getElementById("input").value);
+                        ultimo = document.getElementById("input").value;
+                        document.getElementById("input").value = 0;
+
+                    } else {
+                        if (ultimo != 0) {
+                            document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) + Number(ultimo);
+                        } else {
+                            document.getElementById("valor").textContent = Number(document.getElementById("valor").textContent) + 1;
+                        }
+                    }
+
+                });
+
+            </script>
+        </div>
+        <div class="container">
+            <h1>Inventario en comun</h1>
+        </div>
+
+        <div class="container">
+            <h1>Poderes</h1>
+        </div>
+        <div class="container">
+            <h1>Hechizos</h1>
+        </div>
+        <div class="container">
+            <h1>HISTORIA</h1>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="container">
+            <h1>OBJETIVOS</h1>
+
+            <input type="checkbox" name="" id="">
+            <label for="">Matar treinta y dos peces</label><br><br>
+
+            <input type="checkbox" name="" id="">
+            <label for="">Matar treinta y dos peces</label><br><br>
+
+            <button>Añadir objetivo</button>
+            <input type="text" name="" id="">
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <!--Guardar esto porque es el unico codigo original del oro
+        <fieldset>
+        
+            <h1>ORO</h1>
+        
         <div id="valor"></div><br><br>
         <input type="number" id="input" name="oro" min="0">
         <button id="resta">Restar</button>
@@ -323,6 +398,8 @@
         </script>
     </fieldset>
 
+    -->
+    <!--
     <fieldset>
         <legend>
             <h1>Inventario en comun</h1>
@@ -342,18 +419,12 @@
     </fieldset>
 
     <fieldset>
-        <legend>
             <h1>HISTORIA</h1>
-        </legend>
-        <form action="">
             <textarea name="" id="" cols="30" rows="10"></textarea>
-        </form>
-    </fieldset>
+        
 
     <fieldset>
-        <legend>
             <h1>OBJETIVOS</h1>
-        </legend>
 
         <input type="checkbox" name="" id="">
         <label for="">Matar treinta y dos peces</label><br><br>
@@ -364,7 +435,7 @@
         <button>Añadir objetivo</button>
         <input type="text" name="" id="">
 
-    </fieldset>
+    </fieldset>-->
 
 </body>
 
