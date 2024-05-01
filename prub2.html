@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adding Elements to List</title>
+
+<style>
+
+    
+ol#lista{
+    list-style-type: none;
+}
+</style>
+</head>
+<body>
+
+<button id="addToList">Agregar elemento a la lista</button>
+<ol id="lista"></ol>
+
+<script>
+document.getElementById("addToList").addEventListener("click", function() {
+    // Crear un nuevo elemento de lista (li)
+    var listItem = document.createElement("li");
+
+    // Crear tres etiquetas (labels) y añadirles contenido
+    var label1 = document.createElement("label");
+    label1.textContent = "Label 1";
+    var label2 = document.createElement("label");
+    label2.textContent = "Label 2";
+    var label3 = document.createElement("label");
+    label3.textContent = "Label 3";
+
+    // Añadir las etiquetas al elemento de lista
+    listItem.appendChild(label1);
+    listItem.appendChild(label2);
+    listItem.appendChild(label3);
+
+    // Añadir el elemento de lista a la lista ordenada (ol)
+    document.getElementById("lista").appendChild(listItem);
+});
+</script>
+
+</body>
+</html>
